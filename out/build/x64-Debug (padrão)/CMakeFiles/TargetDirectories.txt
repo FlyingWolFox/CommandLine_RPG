@@ -1,0 +1,3 @@
+C:/Users/lipss/source/repos/CommandLine_RPG/out/build/x64-Debug (padrão)/CMakeFiles/edit_cache.dir
+C:/Users/lipss/source/repos/CommandLine_RPG/out/build/x64-Debug (padrão)/CMakeFiles/CommandLine_RPG.dir
+C:/Users/lipss/source/repos/CommandLine_RPG/out/build/x64-Debug (padrão)/CMakeFiles/rebuild_cache.dir

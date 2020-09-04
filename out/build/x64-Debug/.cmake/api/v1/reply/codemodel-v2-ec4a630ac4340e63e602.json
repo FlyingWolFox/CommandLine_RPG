@@ -1,0 +1,102 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "pugixml",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "pugixml",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CommandLine_RPG",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "pugixml",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CommandLine_RPG::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CommandLine_RPG-Debug-941b0e75f5c9baeaa4e8.json",
+					"name" : "CommandLine_RPG",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "pugixml::@e1d81a3502a5d3c443df",
+					"jsonFile" : "target-pugixml-Debug-c5a8efd72bd4b97c0b39.json",
+					"name" : "pugixml",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/lipss/source/repos/CommandLine_RPG/out/build/x64-Debug",
+		"source" : "C:/Users/lipss/source/repos/CommandLine_RPG"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

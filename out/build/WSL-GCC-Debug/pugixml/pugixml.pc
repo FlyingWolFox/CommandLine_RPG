@@ -1,0 +1,11 @@
+prefix=/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/install/WSL-GCC-Debug
+exec_prefix=${prefix}
+includedir=/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/install/WSL-GCC-Debug/include
+libdir=/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/install/WSL-GCC-Debug/lib
+
+Name: pugixml
+Description: Light-weight, simple and fast XML parser for C++ with XPath support.
+URL: https://pugixml.org/
+Version: 1.10
+Cflags: -I${includedir}
+Libs: -L${libdir} -lpugixml

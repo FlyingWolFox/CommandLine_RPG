@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CommandLine_RPG",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CommandLine_RPG::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CommandLine_RPG-Debug-fd291e65edc1b5e16c1d.json",
+					"name" : "CommandLine_RPG",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug",
+		"source" : "/mnt/c/Users/lipss/source/repos/CommandLine_RPG"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

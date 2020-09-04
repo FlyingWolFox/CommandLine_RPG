@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<sprites>
+	<sheet>
+		<sprite x="1" y="1" priority="5">O</sprite>
+		<sprite x="1" y="1" priority="1">X</sprite>
+	</sheet>
+</sprites>

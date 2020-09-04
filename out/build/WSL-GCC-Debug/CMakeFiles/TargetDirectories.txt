@@ -1,0 +1,7 @@
+/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug/CMakeFiles/install/strip.dir
+/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug/CMakeFiles/install/local.dir
+/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug/CMakeFiles/CommandLine_RPG.dir
+/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug/CMakeFiles/install.dir
+/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/build/WSL-GCC-Debug/CMakeFiles/list_install_components.dir
