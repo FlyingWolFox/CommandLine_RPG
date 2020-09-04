@@ -1,1 +1,0 @@
-/mnt/c/Users/lipss/source/repos/CommandLine_RPG/out/install/WSL-GCC-Debug/bin/CommandLine_RPG
