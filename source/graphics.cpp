@@ -39,6 +39,7 @@ void vStartUp() {
 void vShutDowm()
 {
 	// TODO: unload things
+	restoreConsole();
 }
 
 void vRender()

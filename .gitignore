@@ -4,11 +4,11 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # PugiXML files
-pugixml/docs/
-pugixml/scripts/
-pugixml/src/
-pugixml/CMakeLists.txt
-pugixml/readme.txt
+source/pugixml/docs/
+source/pugixml/scripts/
+source/pugixml/src/
+source/pugixml/CMakeLists.txt
+source/pugixml/readme.txt
 
 # User-specific files
 *.rsuser

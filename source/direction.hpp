@@ -1,4 +1,8 @@
 #pragma once
+#ifdef __linux__
+#include <cstddef> //TODO: remove dependence on the size_t type
+#endif // Linux
+
 enum direction {
 	RIGHT = 1,
 	LEFT = 2,
