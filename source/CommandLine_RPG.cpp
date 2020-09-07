@@ -1,5 +1,6 @@
-﻿#include "CommandLine_RPG.h"
-
+﻿#include "graphics.hpp"
+#include "direction.hpp"
+#include "loader.hpp"
 int main(int argc, char** argv) {
 	vStartUp();
 
@@ -20,7 +21,6 @@ int main(int argc, char** argv) {
 		vScrollBackgound(direction);
 		vRender();
 	}
-	getchar();
 	return 0;
 }
 
