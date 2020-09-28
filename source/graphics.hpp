@@ -1,7 +1,7 @@
 #pragma once
 #include "direction.hpp"
 #include "loader.hpp"
-#include <iostream>
+#include <vector>
 #include <algorithm>
 extern "C" {
 #include "ansi_escapes.h"
@@ -56,6 +56,17 @@ struct Sprite {
 
 		return sprite1 < sprite2 ? -1 : 1;
 	}
+	Sprite operator=(const Sprite& spriteToCopy)
+	{
+		Sprite newSprite;
+		newSprite.iXSize = spriteToCopy.iXSize;
+		newSprite.iYSize = spriteToCopy.iYSize;
+		newSprite.iPriority = spriteToCopy.iPriority;
+		newSprite.data = new char[iXSize * iYSize + 1];
+		unsigned dataSize = spriteToCopy.iXSize * spriteToCopy.iYSize + 1;
+		std::copy(spriteToCopy.data, spriteToCopy.data + dataSize, newSprite.data);
+		return newSprite;
+	}
 	~Sprite()
 	{
 		delete(data);
@@ -65,7 +76,8 @@ struct Sprite {
 
 void vStartUp();
 void vRender();
-Sprite* vLoadSpriteToScreen(unsigned uSpriteNum);
+Sprite* sLoadSpriteToScreen(unsigned uSpriteNum);
+void vLoadSpriteSheet(unsigned uSheetNum);
 void vFillSpriteLayer();
 void vScrollBackgound(int direction, int times = 1);
 void vGetResolution();
