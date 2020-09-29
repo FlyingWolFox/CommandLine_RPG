@@ -6,8 +6,10 @@ int iXBackgroundSize, iYBackgroundSize;
 //TODO: implement color buffers
 //TODo: implement color buffer using less memory (optimization)
 char* backgroundLayer, * spriteLayer, * windowLayer, * screenBuffer; //TODO: implement all layers
-Sprite* sprites;
+Sprite* sprites; //TODO: use vector
 std::vector<Sprite> onScreenSprites;
+
+//TODO: use x,y coordinates instead of i,j
 
 void vStartUp() {
 	// load background and sprites
@@ -32,7 +34,7 @@ void vStartUp() {
 	//TODO: initialize all layers here
 	//TODO: also, fix this warnings
 	spriteLayer = new char[iXScreenSize * iYScreenSize + 1];
-
+	
 	screenBuffer = new char[iXScreenSize * iYScreenSize + 1];
 	screenBuffer[iXScreenSize * iYScreenSize] = '\0';
 
@@ -70,13 +72,21 @@ void vFillSpriteLayer()
 	//TODO: this
 	if(onScreenSprites.size() > 1)
 		std::sort(onScreenSprites.begin(), onScreenSprites.end());
-
-
+	for (auto sprite : onScreenSprites)
+	{
+		for (auto i = sprite.iYPosition; i < sprite.iYPosition + sprite.iYSize; i++)
+		{
+			for (auto j = sprite.iXPosition; j < sprite.iXPosition + sprite.iXSize; j++)
+				spriteLayer[i * iXScreenSize + j] = sprite.data[(i - sprite.iYPosition) * sprite.iXSize + j - sprite.iXPosition];
+		}
+	}
 }
 
 Sprite* sLoadSpriteToScreen(unsigned uSpriteNum)
 {
+	//TODO: this
 	Sprite newSprite = sprites[uSpriteNum];
+	return nullptr; //TODO: remove this
 }
 
 void vLoadSpriteSheet(unsigned uSheetNum)
