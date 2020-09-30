@@ -72,9 +72,11 @@ void vFillSpriteLayer()
 		std::sort(onScreenSprites.begin(), onScreenSprites.end());
 	for (auto sprite : onScreenSprites)
 	{
-		for (auto x = sprite.iXPosition; x < sprite.iXPosition + sprite.iXSize; x++)
+		auto xFinalPosition = std::min(iXScreenSize, sprite.iXPosition + sprite.iXSize);
+		auto yFinalPosition = std::min(iYScreenSize, sprite.iYPosition + sprite.iYSize);
+		for (auto x = sprite.iXPosition; x < xFinalPosition; x++)
 		{
-			for (auto y = sprite.iYPosition; y < sprite.iYPosition + sprite.iYSize; y++)
+			for (auto y = sprite.iYPosition; y < yFinalPosition; y++)
 				spriteLayer[y * iXScreenSize + x] = sprite.data[(y - sprite.iYPosition) * sprite.iXSize + x - sprite.iXPosition];
 		}
 	}
