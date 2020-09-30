@@ -72,10 +72,10 @@ void vFillSpriteLayer()
 		std::sort(onScreenSprites.begin(), onScreenSprites.end());
 	for (auto sprite : onScreenSprites)
 	{
-		for (auto i = sprite.iYPosition; i < sprite.iYPosition + sprite.iYSize; i++)
+		for (auto x = sprite.iXPosition; x < sprite.iXPosition + sprite.iXSize; x++)
 		{
-			for (auto j = sprite.iXPosition; j < sprite.iXPosition + sprite.iXSize; j++)
-				spriteLayer[i * iXScreenSize + j] = sprite.data[(i - sprite.iYPosition) * sprite.iXSize + j - sprite.iXPosition];
+			for (auto y = sprite.iYPosition; y < sprite.iYPosition + sprite.iYSize; y++)
+				spriteLayer[y * iXScreenSize + x] = sprite.data[(y - sprite.iYPosition) * sprite.iXSize + x - sprite.iXPosition];
 		}
 	}
 }
@@ -126,8 +126,6 @@ void vScrollBackgound(int direction, int times)
 
 	movement(direction, &iXNewCameraPosition, &iYNewCameraPosition, uXMovement, uYMovement);
 
-	// TODO: split the directional movement in X and Y movement (abandon the times variable)
-	// TODO: find why scrolling is inverted between X and Y
 	// TODO: times is not zero when scrolling past map border?
 	if (iXNewCameraPosition + iXScreenSize >= iXBackgroundSize || iXNewCameraPosition < 0)
 		uXMovement = std::max(iXCameraPosition + iXScreenSize - iXBackgroundSize, 0);
@@ -136,21 +134,21 @@ void vScrollBackgound(int direction, int times)
 
 	movement(direction, &iXCameraPosition, &iYCameraPosition, uXMovement, uYMovement);
 
-	for (int i = 0; i < iYScreenSize; i++)
+	for (int x = 0; x < iXScreenSize; x++)
 	{
-		if (i == iYBackgroundSize)
-			break;
-
-		for (int j = 0; j < iXScreenSize; j++)
+		if (x == iXBackgroundSize)
 		{
-			if (j == iXBackgroundSize)
-			{
-				if (i != iYScreenSize - 1)
-					screenBuffer[iXScreenSize * i + j] = '\n';
-				
+			for (int y = 0; y < iYScreenSize - 1; y++)
+				screenBuffer[y * iXScreenSize + x] = '\n';
+			break;
+		}
+
+		for (int y = 0; y < iYScreenSize; y++)
+		{
+			if (y == iYBackgroundSize)
 				break;
-			}
-			screenBuffer[i * iXScreenSize + j] = backgroundLayer[((iYCameraPosition + i) * iXBackgroundSize) + (iXCameraPosition + j)];
+
+			screenBuffer[y * iXScreenSize + x] = backgroundLayer[((iYCameraPosition + y) * iXBackgroundSize) + (iXCameraPosition + x)];
 		}
 	}
 }
@@ -164,6 +162,7 @@ void vGetResolution()
 }
 
 bool bResolutionChanged() {
+	//TODO: this already gets the resolution, isn't convenient to return it when changed?
 	//TODO: define behavior
 	int iX, iY;
 	moveTo(999, 999);
