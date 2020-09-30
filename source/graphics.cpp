@@ -9,8 +9,6 @@ char* backgroundLayer, * spriteLayer, * windowLayer, * screenBuffer; //TODO: imp
 Sprite* sprites; //TODO: use vector
 std::vector<Sprite> onScreenSprites;
 
-//TODO: use x,y coordinates instead of i,j
-
 void vStartUp() {
 	// load background and sprites
 	/*tip: if there's need for more	backgrounds
