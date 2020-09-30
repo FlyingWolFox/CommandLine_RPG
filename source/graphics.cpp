@@ -68,6 +68,7 @@ void vRender()
 void vFillSpriteLayer()
 {
 	//TODO: this
+	//TODO: fill sprite layer with "nulls"
 	if(onScreenSprites.size() > 1)
 		std::sort(onScreenSprites.begin(), onScreenSprites.end());
 	for (auto sprite : onScreenSprites)
